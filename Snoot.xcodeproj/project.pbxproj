@@ -9,7 +9,22 @@
 /* Begin PBXBuildFile section */
 		215946661D5EC01200F2E5DF /* Snoot.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 215946651D5EC01200F2E5DF /* Snoot.h */; };
 		215946681D5EC01200F2E5DF /* Snoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 215946671D5EC01200F2E5DF /* Snoot.m */; };
+		215946751D5EC05200F2E5DF /* SnootTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 215946741D5EC05200F2E5DF /* SnootTests.m */; };
+		215946771D5EC05200F2E5DF /* libSnoot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 215946621D5EC01200F2E5DF /* libSnoot.a */; };
+		215946851D5EE33500F2E5DF /* SnootSubsequent.m in Sources */ = {isa = PBXBuildFile; fileRef = 215946841D5EE33500F2E5DF /* SnootSubsequent.m */; };
+		215946881D5EE6EC00F2E5DF /* SnootConcurrent.m in Sources */ = {isa = PBXBuildFile; fileRef = 215946871D5EE6EC00F2E5DF /* SnootConcurrent.m */; };
+		2159468B1D5EE74900F2E5DF /* SnootSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159468A1D5EE74900F2E5DF /* SnootSingle.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		215946781D5EC05200F2E5DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2159465A1D5EC01200F2E5DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 215946611D5EC01200F2E5DF;
+			remoteInfo = Snoot;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		215946601D5EC01200F2E5DF /* CopyFiles */ = {
@@ -28,6 +43,17 @@
 		215946621D5EC01200F2E5DF /* libSnoot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSnoot.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		215946651D5EC01200F2E5DF /* Snoot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Snoot.h; sourceTree = "<group>"; };
 		215946671D5EC01200F2E5DF /* Snoot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Snoot.m; sourceTree = "<group>"; };
+		215946721D5EC05200F2E5DF /* SnootTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnootTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		215946741D5EC05200F2E5DF /* SnootTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnootTests.m; sourceTree = "<group>"; };
+		215946761D5EC05200F2E5DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		215946821D5ED1B800F2E5DF /* SnootProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnootProtocols.h; sourceTree = "<group>"; };
+		215946831D5EE33500F2E5DF /* SnootSubsequent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnootSubsequent.h; sourceTree = "<group>"; };
+		215946841D5EE33500F2E5DF /* SnootSubsequent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnootSubsequent.m; sourceTree = "<group>"; };
+		215946861D5EE6EC00F2E5DF /* SnootConcurrent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnootConcurrent.h; sourceTree = "<group>"; };
+		215946871D5EE6EC00F2E5DF /* SnootConcurrent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnootConcurrent.m; sourceTree = "<group>"; };
+		215946891D5EE74900F2E5DF /* SnootSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnootSingle.h; sourceTree = "<group>"; };
+		2159468A1D5EE74900F2E5DF /* SnootSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnootSingle.m; sourceTree = "<group>"; };
+		2159468D1D5EE98600F2E5DF /* SnootDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnootDefinitions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +64,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2159466F1D5EC05200F2E5DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				215946771D5EC05200F2E5DF /* libSnoot.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -45,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				215946641D5EC01200F2E5DF /* Snoot */,
+				215946731D5EC05200F2E5DF /* SnootTests */,
 				215946631D5EC01200F2E5DF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				215946621D5EC01200F2E5DF /* libSnoot.a */,
+				215946721D5EC05200F2E5DF /* SnootTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,10 +96,83 @@
 		215946641D5EC01200F2E5DF /* Snoot */ = {
 			isa = PBXGroup;
 			children = (
+				2159467D1D5EC05900F2E5DF /* Source */,
+			);
+			path = Snoot;
+			sourceTree = "<group>";
+		};
+		215946731D5EC05200F2E5DF /* SnootTests */ = {
+			isa = PBXGroup;
+			children = (
+				215946741D5EC05200F2E5DF /* SnootTests.m */,
+				215946761D5EC05200F2E5DF /* Info.plist */,
+			);
+			path = SnootTests;
+			sourceTree = "<group>";
+		};
+		2159467D1D5EC05900F2E5DF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2159468E1D5EE9A900F2E5DF /* Core */,
 				215946651D5EC01200F2E5DF /* Snoot.h */,
 				215946671D5EC01200F2E5DF /* Snoot.m */,
 			);
-			path = Snoot;
+			name = Source;
+			sourceTree = "<group>";
+		};
+		2159467E1D5EC07F00F2E5DF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				215946821D5ED1B800F2E5DF /* SnootProtocols.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		2159467F1D5EC09500F2E5DF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				215946811D5ED17300F2E5DF /* Implementation */,
+				215946801D5EC0B100F2E5DF /* Headers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		215946801D5EC0B100F2E5DF /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				215946831D5EE33500F2E5DF /* SnootSubsequent.h */,
+				215946861D5EE6EC00F2E5DF /* SnootConcurrent.h */,
+				215946891D5EE74900F2E5DF /* SnootSingle.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		215946811D5ED17300F2E5DF /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				215946841D5EE33500F2E5DF /* SnootSubsequent.m */,
+				215946871D5EE6EC00F2E5DF /* SnootConcurrent.m */,
+				2159468A1D5EE74900F2E5DF /* SnootSingle.m */,
+			);
+			name = Implementation;
+			sourceTree = "<group>";
+		};
+		2159468C1D5EE95300F2E5DF /* Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				2159468D1D5EE98600F2E5DF /* SnootDefinitions.h */,
+			);
+			name = Definitions;
+			sourceTree = "<group>";
+		};
+		2159468E1D5EE9A900F2E5DF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2159468C1D5EE95300F2E5DF /* Definitions */,
+				2159467E1D5EC07F00F2E5DF /* Protocols */,
+				2159467F1D5EC09500F2E5DF /* Classes */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +195,24 @@
 			productReference = 215946621D5EC01200F2E5DF /* libSnoot.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		215946711D5EC05200F2E5DF /* SnootTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2159467A1D5EC05200F2E5DF /* Build configuration list for PBXNativeTarget "SnootTests" */;
+			buildPhases = (
+				2159466E1D5EC05200F2E5DF /* Sources */,
+				2159466F1D5EC05200F2E5DF /* Frameworks */,
+				215946701D5EC05200F2E5DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				215946791D5EC05200F2E5DF /* PBXTargetDependency */,
+			);
+			name = SnootTests;
+			productName = SnootTests;
+			productReference = 215946721D5EC05200F2E5DF /* SnootTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +223,9 @@
 				ORGANIZATIONNAME = "Sourav Ray";
 				TargetAttributes = {
 					215946611D5EC01200F2E5DF = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					215946711D5EC05200F2E5DF = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -113,20 +243,50 @@
 			projectRoot = "";
 			targets = (
 				215946611D5EC01200F2E5DF /* Snoot */,
+				215946711D5EC05200F2E5DF /* SnootTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		215946701D5EC05200F2E5DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2159465E1D5EC01200F2E5DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				215946851D5EE33500F2E5DF /* SnootSubsequent.m in Sources */,
+				2159468B1D5EE74900F2E5DF /* SnootSingle.m in Sources */,
 				215946681D5EC01200F2E5DF /* Snoot.m in Sources */,
+				215946881D5EE6EC00F2E5DF /* SnootConcurrent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2159466E1D5EC05200F2E5DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				215946751D5EC05200F2E5DF /* SnootTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		215946791D5EC05200F2E5DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 215946611D5EC01200F2E5DF /* Snoot */;
+			targetProxy = 215946781D5EC05200F2E5DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		215946691D5EC01200F2E5DF /* Debug */ = {
@@ -229,6 +389,26 @@
 			};
 			name = Release;
 		};
+		2159467B1D5EC05200F2E5DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SnootTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = raysourav.com.SnootTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2159467C1D5EC05200F2E5DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SnootTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = raysourav.com.SnootTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -246,6 +426,14 @@
 			buildConfigurations = (
 				2159466C1D5EC01200F2E5DF /* Debug */,
 				2159466D1D5EC01200F2E5DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2159467A1D5EC05200F2E5DF /* Build configuration list for PBXNativeTarget "SnootTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2159467B1D5EC05200F2E5DF /* Debug */,
+				2159467C1D5EC05200F2E5DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
