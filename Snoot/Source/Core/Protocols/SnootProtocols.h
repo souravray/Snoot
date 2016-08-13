@@ -42,9 +42,9 @@
 @protocol SnootBaseProtocol <NSObject>
 @required
 -(void) addBlock:(void (^)(id<SnootWorkerProtocol> worker))block;
--(void) onCompleteBlock:(void (^)(BOOL isCancelled, id<SnootNestedWorkflowrProtocol> workflow))block;
+-(void) onCompleteBlock:(void (^)(BOOL isCanceled, id<SnootNestedWorkflowrProtocol> workflow))block;
 -(void) onCompleteWorkflow:(id<SnootBaseProtocol>) workflow;
 -(void) onSuccessWorkflow:(id<SnootBaseProtocol>) workflow;
--(void) onCancellWorkflow:(id<SnootBaseProtocol>) workflow;
+-(void) onCancelWorkflow:(id<SnootBaseProtocol>) workflow;
 -(void) run;
 @end

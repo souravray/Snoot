@@ -12,4 +12,6 @@
 
 @interface SnootSingle : NSObject  <SnootBaseProtocol, SnootWorkerProtocol, SnootNestedWorkflowrProtocol>
 
+-(instancetype) initWithBlock:(void (^)(id<SnootWorkerProtocol> worker))block;
+
 @end

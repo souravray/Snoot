@@ -12,8 +12,11 @@
 
 #pragma mark - initialization
 
--(instancetype) init {
+-(instancetype) initWithBlock:(void (^)(id<SnootWorkerProtocol> worker))block {
     self=[super init];
+    if(self) {
+        [self addBlock:block];
+    }
     return self;
 }
 
@@ -23,7 +26,7 @@
     
 }
 
--(void) onCompleteBlock:(void (^)(BOOL isCancelled, id<SnootNestedWorkflowrProtocol> workflow))block {
+-(void) onCompleteBlock:(void (^)(BOOL isCanceled, id<SnootNestedWorkflowrProtocol> workflow))block {
 }
 
 -(void) onCompleteWorkflow:(id<SnootBaseProtocol>) workflow{
@@ -34,7 +37,7 @@
     
 }
 
--(void) onCancellWorkflow:(id<SnootBaseProtocol>) workflow {
+-(void) onCancelWorkflow:(id<SnootBaseProtocol>) workflow {
     
 }
 

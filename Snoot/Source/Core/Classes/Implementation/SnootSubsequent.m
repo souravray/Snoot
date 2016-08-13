@@ -12,7 +12,7 @@
 
 #pragma mark - initialization
 
--(instancetype) initWithCancellationAction:(SNOOT_SUBSEQUENT_ON_CANCELLATION_ACTION) action {
+-(instancetype) initWithCancelAction:(SNOOT_SUBSEQUENT_ON_CANCEL_ACTION) action {
     self=[super init];
     return self;
 }
@@ -23,7 +23,7 @@
     
 }
 
--(void) onCompleteBlock:(void (^)(BOOL isCancelled, id<SnootNestedWorkflowrProtocol> workflow))block {
+-(void) onCompleteBlock:(void (^)(BOOL isCanceled, id<SnootNestedWorkflowrProtocol> workflow))block {
 }
 
 -(void) onCompleteWorkflow:(id<SnootBaseProtocol>) workflow{
@@ -34,7 +34,7 @@
     
 }
 
--(void) onCancellWorkflow:(id<SnootBaseProtocol>) workflow {
+-(void) onCancelWorkflow:(id<SnootBaseProtocol>) workflow {
     
 }
 

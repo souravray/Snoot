@@ -14,7 +14,7 @@
 @interface Snoot : NSObject
 
 +(id<SnootBaseProtocol>) subsequent;
-+(id<SnootBaseProtocol>) subsequentWithCancellationAction:(SNOOT_SUBSEQUENT_ON_CANCELLATION_ACTION) action;
++(id<SnootBaseProtocol>) subsequentWithCancelAction:(SNOOT_SUBSEQUENT_ON_CANCEL_ACTION) action;
 +(id<SnootBaseProtocol>) concurrent;
 +(id<SnootBaseProtocol>) singleWithBlock:(void (^)(id<SnootWorkerProtocol> worker))block;
 
