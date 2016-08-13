@@ -104,8 +104,8 @@
 		215946731D5EC05200F2E5DF /* SnootTests */ = {
 			isa = PBXGroup;
 			children = (
-				215946741D5EC05200F2E5DF /* SnootTests.m */,
 				215946761D5EC05200F2E5DF /* Info.plist */,
+				215946741D5EC05200F2E5DF /* SnootTests.m */,
 			);
 			path = SnootTests;
 			sourceTree = "<group>";
@@ -117,7 +117,7 @@
 				215946651D5EC01200F2E5DF /* Snoot.h */,
 				215946671D5EC01200F2E5DF /* Snoot.m */,
 			);
-			name = Source;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		2159467E1D5EC07F00F2E5DF /* Protocols */ = {
@@ -125,36 +125,36 @@
 			children = (
 				215946821D5ED1B800F2E5DF /* SnootProtocols.h */,
 			);
-			name = Protocols;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		2159467F1D5EC09500F2E5DF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				215946811D5ED17300F2E5DF /* Implementation */,
 				215946801D5EC0B100F2E5DF /* Headers */,
+				215946811D5ED17300F2E5DF /* Implementation */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		215946801D5EC0B100F2E5DF /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				215946831D5EE33500F2E5DF /* SnootSubsequent.h */,
 				215946861D5EE6EC00F2E5DF /* SnootConcurrent.h */,
 				215946891D5EE74900F2E5DF /* SnootSingle.h */,
+				215946831D5EE33500F2E5DF /* SnootSubsequent.h */,
 			);
-			name = Headers;
+			path = Headers;
 			sourceTree = "<group>";
 		};
 		215946811D5ED17300F2E5DF /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				215946841D5EE33500F2E5DF /* SnootSubsequent.m */,
 				215946871D5EE6EC00F2E5DF /* SnootConcurrent.m */,
 				2159468A1D5EE74900F2E5DF /* SnootSingle.m */,
+				215946841D5EE33500F2E5DF /* SnootSubsequent.m */,
 			);
-			name = Implementation;
+			path = Implementation;
 			sourceTree = "<group>";
 		};
 		2159468C1D5EE95300F2E5DF /* Definitions */ = {
@@ -162,17 +162,17 @@
 			children = (
 				2159468D1D5EE98600F2E5DF /* SnootDefinitions.h */,
 			);
-			name = Definitions;
+			path = Definitions;
 			sourceTree = "<group>";
 		};
 		2159468E1D5EE9A900F2E5DF /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2159467F1D5EC09500F2E5DF /* Classes */,
 				2159468C1D5EE95300F2E5DF /* Definitions */,
 				2159467E1D5EC07F00F2E5DF /* Protocols */,
-				2159467F1D5EC09500F2E5DF /* Classes */,
 			);
-			name = Core;
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +428,7 @@
 				2159466D1D5EC01200F2E5DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2159467A1D5EC05200F2E5DF /* Build configuration list for PBXNativeTarget "SnootTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +437,7 @@
 				2159467C1D5EC05200F2E5DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
