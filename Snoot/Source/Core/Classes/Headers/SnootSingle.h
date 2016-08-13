@@ -10,8 +10,8 @@
 #import "SnootDefinitions.h"
 #import "SnootProtocols.h"
 
-@interface SnootSingle : NSObject  <SnootBaseProtocol, SnootWorkerProtocol, SnootNestedWorkflowrProtocol>
+@interface SnootSingle : NSObject  <SnootBase, SnootWorker, SnootNestedWorkflow>
 
--(instancetype) initWithBlock:(void (^)(id<SnootWorkerProtocol> worker))block;
+-(instancetype) initWithBlock:(void (^)(id<SnootWorker> worker))block;
 
 @end

@@ -10,7 +10,7 @@
 #import "SnootDefinitions.h"
 #import "SnootProtocols.h"
 
-@interface SnootSubsequent : NSObject<SnootBaseProtocol, SnootWorkerProtocol, SnootNestedWorkflowrProtocol>
+@interface SnootSubsequent : NSObject<SnootBase, SnootWorker, SnootNestedWorkflow>
 -(instancetype) initWithCancelAction:(SNOOT_SUBSEQUENT_ON_CANCEL_ACTION) action;
 
 @end

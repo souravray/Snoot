@@ -140,9 +140,9 @@
 		215946801D5EC0B100F2E5DF /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				215946831D5EE33500F2E5DF /* SnootSubsequent.h */,
 				215946861D5EE6EC00F2E5DF /* SnootConcurrent.h */,
 				215946891D5EE74900F2E5DF /* SnootSingle.h */,
-				215946831D5EE33500F2E5DF /* SnootSubsequent.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -150,9 +150,9 @@
 		215946811D5ED17300F2E5DF /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
+				215946841D5EE33500F2E5DF /* SnootSubsequent.m */,
 				215946871D5EE6EC00F2E5DF /* SnootConcurrent.m */,
 				2159468A1D5EE74900F2E5DF /* SnootSingle.m */,
-				215946841D5EE33500F2E5DF /* SnootSubsequent.m */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";

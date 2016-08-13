@@ -7,34 +7,41 @@
 //
 
 #import "SnootConcurrent.h"
+@interface SnootConcurrent ()
+
+@end
 
 @implementation SnootConcurrent
 
-#pragma mark - initialization
+#pragma mark - initialization / dealocation
 
 -(instancetype) init {
     self=[super init];
     return self;
 }
 
-#pragma mark -  SnootBaseProtocol methods
-
--(void) addBlock:(void (^)(id<SnootWorkerProtocol> worker))block {
+-(void) dealloc {
     
 }
 
--(void) onCompleteBlock:(void (^)(BOOL isCanceled, id<SnootNestedWorkflowrProtocol> workflow))block {
-}
+#pragma mark -  SnootBase methods
 
--(void) onCompleteWorkflow:(id<SnootBaseProtocol>) workflow{
+-(void) addBlock:(void (^)(id<SnootWorker> worker))block {
     
 }
 
--(void) onSuccessWorkflow:(id<SnootBaseProtocol>) workflow {
+-(void) onCompleteBlock:(void (^)(BOOL isCanceled, id<SnootNestedWorkflow> workflow))block {
+}
+
+-(void) onCompleteWorkflow:(id<SnootBase>) workflow{
     
 }
 
--(void) onCancelWorkflow:(id<SnootBaseProtocol>) workflow {
+-(void) onSuccessWorkflow:(id<SnootBase>) workflow {
+    
+}
+
+-(void) onCancelWorkflow:(id<SnootBase>) workflow {
     
 }
 
@@ -43,7 +50,7 @@
 }
 
 
-#pragma mark -  SnootWorkerProtocol methods
+#pragma mark -  SnootWorker methods
 
 -(void) done {
     
@@ -54,7 +61,7 @@
 }
 
 
-#pragma mark -  SnootNestedWorkflowrProtocol methods
+#pragma mark -  SnootNestedWorkflow methods
 
 -(void) next {
     

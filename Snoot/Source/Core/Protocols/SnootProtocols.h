@@ -8,24 +8,24 @@
 
 
 //
-// SnootWorkerProtocol
+// SnootWorker
 //
 // Controls features of text widgets (or other custom objects that might wish
 // to respond to keyboard input).
 //
-@protocol SnootWorkerProtocol <NSObject>
+@protocol SnootWorker <NSObject>
 @required
 -(void) done ;
 -(void) cancel;
 @end
 
 //
-// SnootNestedWorkflowrProtocol
+// SnootNestedWorkflow
 //
 // Controls features of text widgets (or other custom objects that might wish
 // to respond to keyboard input).
 //
-@protocol SnootNestedWorkflowrProtocol <NSObject>
+@protocol SnootNestedWorkflow <NSObject>
 @required
 -(void) next;
 -(void) success;
@@ -34,17 +34,17 @@
 @end
 
 //
-// SnootBaseProtocol
+// SnootBase
 //
 // Controls features of text widgets (or other custom objects that might wish
 // to respond to keyboard input).
 //
-@protocol SnootBaseProtocol <NSObject>
+@protocol SnootBase <NSObject>
 @required
--(void) addBlock:(void (^)(id<SnootWorkerProtocol> worker))block;
--(void) onCompleteBlock:(void (^)(BOOL isCanceled, id<SnootNestedWorkflowrProtocol> workflow))block;
--(void) onCompleteWorkflow:(id<SnootBaseProtocol>) workflow;
--(void) onSuccessWorkflow:(id<SnootBaseProtocol>) workflow;
--(void) onCancelWorkflow:(id<SnootBaseProtocol>) workflow;
+-(void) addBlock:(void (^)(id<SnootWorker> worker))block;
+-(void) onCompleteBlock:(void (^)(BOOL isCanceled, id<SnootNestedWorkflow> workflow))block;
+-(void) onCompleteWorkflow:(id<SnootBase>) workflow;
+-(void) onSuccessWorkflow:(id<SnootBase>) workflow;
+-(void) onCancelWorkflow:(id<SnootBase>) workflow;
 -(void) run;
 @end

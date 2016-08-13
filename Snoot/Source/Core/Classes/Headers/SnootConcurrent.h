@@ -10,6 +10,6 @@
 #import "SnootDefinitions.h"
 #import "SnootProtocols.h"
 
-@interface SnootConcurrent : NSObject <SnootBaseProtocol, SnootWorkerProtocol, SnootNestedWorkflowrProtocol>
+@interface SnootConcurrent : NSObject <SnootBase, SnootWorker, SnootNestedWorkflow>
 
 @end
