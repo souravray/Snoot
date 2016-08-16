@@ -8,12 +8,11 @@
 
 #import "SnootSubsequent.h"
 @interface SnootSubsequent ()
-@property (nonatomic,strong) dispatch_semaphore_t semaphore;
+@property (nonatomic,strong) dispatch_semaphore_t notifyCompletion;
 @property (nonatomic,strong) NSString *queueId;
 @property (nonatomic,strong) dispatch_queue_t serialQueue;
 @property (nonatomic,assign) SNOOT_SUBSEQUENT_ON_CANCEL_ACTION onCancellation;
 @property (nonatomic,assign) BOOL isAnyBlockCancelled;
-@property (nonatomic,assign) BOOL isLastBlockedCancelled;
 @end
 
 @implementation SnootSubsequent
@@ -24,8 +23,7 @@
     self=[super init];
     if(self) {
         self.isAnyBlockCancelled = NO;
-        self.isLastBlockedCancelled = NO;
-        self.semaphore = dispatch_semaphore_create(0);
+        self.notifyCompletion = dispatch_semaphore_create(0);
         self.queueId = [NSString stringWithFormat:@"com.raysourav.snoot-%@", [[NSUUID UUID]UUIDString]];
         self.serialQueue = dispatch_queue_create([self.queueId UTF8String], DISPATCH_QUEUE_SERIAL);
         dispatch_suspend(self.serialQueue);
@@ -34,8 +32,16 @@
 }
 
 -(void) dealloc {
-    self.semaphore = nil;
+    self.notifyCompletion = nil;
     self.queueId = nil;
+}
+
+#pragma mark - setter methods
+
+-(void) setIsAnyBlockCancelled:(BOOL)isAnyBlockCancelled {
+    @synchronized (self) {
+        _isAnyBlockCancelled =  _isAnyBlockCancelled || isAnyBlockCancelled;
+    }
 }
 
 #pragma mark -  SnootBase methods
@@ -44,12 +50,9 @@
     __weak typeof(self) weakSelf = self;
     dispatch_async(self.serialQueue, ^{
         if((weakSelf.onCancellation==kSKIP_ALL_ON_CANCELLATION && !weakSelf.isAnyBlockCancelled)||
-           (weakSelf.onCancellation==kSKIP_ONLY_NEXT_ON_CANCELLATION && !weakSelf.isLastBlockedCancelled)||
            weakSelf.onCancellation==kIGNORE_ALL_CANCELLATIONS) {
-            block(self);
+            block(weakSelf);
             dispatch_semaphore_wait(weakSelf.semaphore, DISPATCH_TIME_FOREVER);
-        } else if(self.onCancellation==kSKIP_ONLY_NEXT_ON_CANCELLATION && weakSelf.isLastBlockedCancelled) {
-            weakSelf.isLastBlockedCancelled = NO;
         }
     });
 }
@@ -81,13 +84,13 @@
 #pragma mark -  SnootWorker methods
 
 -(void) done {
-    self.isLastBlockedCancelled = NO;
-    dispatch_semaphore_signal(self.semaphore);
+    self.isAnyBlockCancelled = NO;
+    dispatch_semaphore_signal(self.notifyCompletion);
 }
 
 -(void) cancel {
-    self.isLastBlockedCancelled = YES;
-    dispatch_semaphore_signal(self.semaphore);
+    self.isAnyBlockCancelled = YES;
+    dispatch_semaphore_signal(self.notifyCompletion);
 }
 
 

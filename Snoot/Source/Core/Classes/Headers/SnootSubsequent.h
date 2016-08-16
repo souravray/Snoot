@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SnootLongLivedObject.h"
 #import "SnootDefinitions.h"
 #import "SnootProtocols.h"
 
-@interface SnootSubsequent : NSObject<SnootBase, SnootWorker, SnootNestedWorkflow>
+@interface SnootSubsequent : SnootLongLivedObject<SnootBase, SnootWorker, SnootNestedWorkflow>
 -(instancetype) initWithCancelAction:(SNOOT_SUBSEQUENT_ON_CANCEL_ACTION) action;
 
 @end

@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SnootLongLivedObject.h"
 #import "SnootDefinitions.h"
 #import "SnootProtocols.h"
 
-@interface SnootSingle : NSObject  <SnootBase, SnootWorker, SnootNestedWorkflow>
+@interface SnootSingle : SnootLongLivedObject  <SnootBase, SnootWorker, SnootNestedWorkflow>
 
 -(instancetype) initWithBlock:(void (^)(id<SnootWorker> worker))block;
 

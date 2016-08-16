@@ -14,6 +14,7 @@
 		215946851D5EE33500F2E5DF /* SnootSubsequent.m in Sources */ = {isa = PBXBuildFile; fileRef = 215946841D5EE33500F2E5DF /* SnootSubsequent.m */; };
 		215946881D5EE6EC00F2E5DF /* SnootConcurrent.m in Sources */ = {isa = PBXBuildFile; fileRef = 215946871D5EE6EC00F2E5DF /* SnootConcurrent.m */; };
 		2159468B1D5EE74900F2E5DF /* SnootSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159468A1D5EE74900F2E5DF /* SnootSingle.m */; };
+		215D52061D6306B400AA0014 /* SnootLongLivedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 215D52051D6306B400AA0014 /* SnootLongLivedObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		215946891D5EE74900F2E5DF /* SnootSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnootSingle.h; sourceTree = "<group>"; };
 		2159468A1D5EE74900F2E5DF /* SnootSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnootSingle.m; sourceTree = "<group>"; };
 		2159468D1D5EE98600F2E5DF /* SnootDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnootDefinitions.h; sourceTree = "<group>"; };
+		215D52041D63069A00AA0014 /* SnootLongLivedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnootLongLivedObject.h; sourceTree = "<group>"; };
+		215D52051D6306B400AA0014 /* SnootLongLivedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnootLongLivedObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,7 @@
 		215946801D5EC0B100F2E5DF /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				215D52041D63069A00AA0014 /* SnootLongLivedObject.h */,
 				215946831D5EE33500F2E5DF /* SnootSubsequent.h */,
 				215946861D5EE6EC00F2E5DF /* SnootConcurrent.h */,
 				215946891D5EE74900F2E5DF /* SnootSingle.h */,
@@ -150,6 +154,7 @@
 		215946811D5ED17300F2E5DF /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
+				215D52051D6306B400AA0014 /* SnootLongLivedObject.m */,
 				215946841D5EE33500F2E5DF /* SnootSubsequent.m */,
 				215946871D5EE6EC00F2E5DF /* SnootConcurrent.m */,
 				2159468A1D5EE74900F2E5DF /* SnootSingle.m */,
@@ -265,6 +270,7 @@
 			files = (
 				215946851D5EE33500F2E5DF /* SnootSubsequent.m in Sources */,
 				2159468B1D5EE74900F2E5DF /* SnootSingle.m in Sources */,
+				215D52061D6306B400AA0014 /* SnootLongLivedObject.m in Sources */,
 				215946681D5EC01200F2E5DF /* Snoot.m in Sources */,
 				215946881D5EE6EC00F2E5DF /* SnootConcurrent.m in Sources */,
 			);

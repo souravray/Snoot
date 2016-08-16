@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SnootLongLivedObject.h"
 #import "SnootDefinitions.h"
 #import "SnootProtocols.h"
 
-@interface SnootConcurrent : NSObject <SnootBase, SnootWorker, SnootNestedWorkflow>
+@interface SnootConcurrent : SnootLongLivedObject <SnootBase, SnootWorker, SnootNestedWorkflow>
 
 @end
